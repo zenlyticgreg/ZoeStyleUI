@@ -1,0 +1,116 @@
+{
+  "colors": {
+    "background": {
+      "base": {
+        "level000": "#FFFFFF",
+        "level020": "#F8F9FA",
+        "level040": "#F1F3F4",
+        "level060": "#E8EAED",
+        "level080": "#DADCE0",
+        "level100": "#BDC1C6"
+      },
+      "action": {
+        "primary": {
+          "normal": "#1A73E8",
+          "hover": "#1557B0",
+          "active": "#174EA6",
+          "disabled": "#E8EAED"
+        },
+        "secondary": {
+          "normal": "#F1F3F4",
+          "hover": "#E8EAED",
+          "selected": "#E3F2FD",
+          "disabled": "#F8F9FA"
+        },
+        "tertiary": {
+          "normal": "#F8F9FA",
+          "hover": "#F1F3F4",
+          "selected": "#E3F2FD",
+          "focused": "#E8F5E8"
+        }
+      },
+      "brand": {
+        "primary": {
+          "normal": "#1A73E8"
+        }
+      }
+    },
+    "text": {
+      "base": {
+        "level000": "#FFFFFF",
+        "level300": "#5F6368",
+        "level400": "#80868B",
+        "level500": "#9AA0A6",
+        "level600": "#BDC1C6",
+        "level800": "#202124"
+      },
+      "action": {
+        "primary": {
+          "normal": "#1A73E8"
+        },
+        "secondary": {
+          "normal": "#5F6368"
+        },
+        "tertiary": {
+          "normal": "#5F6368"
+        }
+      }
+    },
+    "border": {
+      "base": {
+        "level060": "#E8EAED",
+        "level600": "#BDC1C6"
+      },
+      "action": {
+        "primary": {
+          "normal": "#1A73E8"
+        },
+        "secondary": {
+          "normal": "#E8EAED"
+        },
+        "tertiary": {
+          "normal": "#E8EAED"
+        }
+      }
+    },
+    "gray": {
+      "30": "#F8F9FA",
+      "60": "#E8EAED",
+      "100": "#BDC1C6",
+      "200": "#9AA0A6",
+      "300": "#80868B",
+      "600": "#5F6368",
+      "700": "#3C4043"
+    }
+  },
+  "spacing": {
+    "base": "8px",
+    "sm": "4px",
+    "md": "12px",
+    "lg": "16px",
+    "xl": "24px",
+    "2xl": "32px"
+  },
+  "borderRadius": {
+    "base": "4px",
+    "sm": "2px",
+    "md": "6px",
+    "lg": "8px",
+    "xl": "12px",
+    "full": "9999px"
+  },
+  "fontSizes": {
+    "xs": "12px",
+    "sm": "14px",
+    "base": "16px",
+    "lg": "18px",
+    "xl": "20px",
+    "2xl": "24px"
+  },
+  "fontWeights": {
+    "normal": "400",
+    "medium": "500",
+    "semibold": "600",
+    "bold": "700"
+  }
+} 

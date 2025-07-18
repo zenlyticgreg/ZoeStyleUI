@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7891363F2E26DD7400F14857 /* interface_styles.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891362F2E26DD7400F14857 /* interface_styles.json */; };
+		789136402E26DD7400F14857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7891362B2E26DD7400F14857 /* Assets.xcassets */; };
+		789136412E26DD7400F14857 /* StyleEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136372E26DD7400F14857 /* StyleEditorView.swift */; };
+		789136422E26DD7400F14857 /* ZenlyticStyleEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */; };
+		789136432E26DD7400F14857 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136352E26DD7400F14857 /* SidebarView.swift */; };
+		789136442E26DD7400F14857 /* PreviewPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136342E26DD7400F14857 /* PreviewPanel.swift */; };
+		789136452E26DD7400F14857 /* StyleEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136312E26DD7400F14857 /* StyleEditorViewModel.swift */; };
+		789136462E26DD7400F14857 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891362C2E26DD7400F14857 /* ContentView.swift */; };
+		789136472E26DD7400F14857 /* SnippetOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136362E26DD7400F14857 /* SnippetOutputView.swift */; };
+		789136482E26DD7400F14857 /* PaletteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136332E26DD7400F14857 /* PaletteEditorView.swift */; };
+		789136492E26DD7400F14857 /* StyleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891362D2E26DD7400F14857 /* StyleModels.swift */; };
+		7891364A2E26DD7400F14857 /* StyleKeyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136382E26DD7400F14857 /* StyleKeyRow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		780ADC332E26D8BC00898757 /* ZenlyticStyleEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenlyticStyleEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7891362B2E26DD7400F14857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7891362C2E26DD7400F14857 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7891362D2E26DD7400F14857 /* StyleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModels.swift; sourceTree = "<group>"; };
+		7891362F2E26DD7400F14857 /* interface_styles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interface_styles.json; sourceTree = "<group>"; };
+		789136312E26DD7400F14857 /* StyleEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleEditorViewModel.swift; sourceTree = "<group>"; };
+		789136332E26DD7400F14857 /* PaletteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditorView.swift; sourceTree = "<group>"; };
+		789136342E26DD7400F14857 /* PreviewPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPanel.swift; sourceTree = "<group>"; };
+		789136352E26DD7400F14857 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		789136362E26DD7400F14857 /* SnippetOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetOutputView.swift; sourceTree = "<group>"; };
+		789136372E26DD7400F14857 /* StyleEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleEditorView.swift; sourceTree = "<group>"; };
+		789136382E26DD7400F14857 /* StyleKeyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKeyRow.swift; sourceTree = "<group>"; };
+		7891363A2E26DD7400F14857 /* ZenlyticStyleEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZenlyticStyleEditor.entitlements; sourceTree = "<group>"; };
+		7891363B2E26DD7400F14857 /* ZenlyticStyleEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZenlyticStyleEditor.xcodeproj; sourceTree = "<group>"; };
+		7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyticStyleEditorApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		780ADC302E26D8BC00898757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		780ADC2A2E26D8BC00898757 = {
+			isa = PBXGroup;
+			children = (
+				7891362B2E26DD7400F14857 /* Assets.xcassets */,
+				7891362C2E26DD7400F14857 /* ContentView.swift */,
+				7891362E2E26DD7400F14857 /* Models */,
+				789136302E26DD7400F14857 /* Resources */,
+				789136322E26DD7400F14857 /* ViewModels */,
+				789136392E26DD7400F14857 /* Views */,
+				7891363A2E26DD7400F14857 /* ZenlyticStyleEditor.entitlements */,
+				7891363B2E26DD7400F14857 /* ZenlyticStyleEditor.xcodeproj */,
+				7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */,
+				780ADC342E26D8BC00898757 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		780ADC342E26D8BC00898757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				780ADC332E26D8BC00898757 /* ZenlyticStyleEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7891362E2E26DD7400F14857 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7891362D2E26DD7400F14857 /* StyleModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		789136302E26DD7400F14857 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7891362F2E26DD7400F14857 /* interface_styles.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		789136322E26DD7400F14857 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				789136312E26DD7400F14857 /* StyleEditorViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		789136392E26DD7400F14857 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				789136332E26DD7400F14857 /* PaletteEditorView.swift */,
+				789136342E26DD7400F14857 /* PreviewPanel.swift */,
+				789136352E26DD7400F14857 /* SidebarView.swift */,
+				789136362E26DD7400F14857 /* SnippetOutputView.swift */,
+				789136372E26DD7400F14857 /* StyleEditorView.swift */,
+				789136382E26DD7400F14857 /* StyleKeyRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7891363D2E26DD7400F14857 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		780ADC322E26D8BC00898757 /* ZenlyticStyleEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 780ADC3F2E26D8BD00898757 /* Build configuration list for PBXNativeTarget "ZenlyticStyleEditor" */;
+			buildPhases = (
+				780ADC2F2E26D8BC00898757 /* Sources */,
+				780ADC302E26D8BC00898757 /* Frameworks */,
+				780ADC312E26D8BC00898757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZenlyticStyleEditor;
+			packageProductDependencies = (
+			);
+			productName = ZenlyticStyleEditor;
+			productReference = 780ADC332E26D8BC00898757 /* ZenlyticStyleEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		780ADC2B2E26D8BC00898757 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					780ADC322E26D8BC00898757 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 780ADC2E2E26D8BC00898757 /* Build configuration list for PBXProject "ZenlyticStyleEditor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 780ADC2A2E26D8BC00898757;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 780ADC342E26D8BC00898757 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7891363D2E26DD7400F14857 /* Products */;
+					ProjectRef = 7891363B2E26DD7400F14857 /* ZenlyticStyleEditor.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				780ADC322E26D8BC00898757 /* ZenlyticStyleEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		780ADC312E26D8BC00898757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7891363F2E26DD7400F14857 /* interface_styles.json in Resources */,
+				789136402E26DD7400F14857 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		780ADC2F2E26D8BC00898757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789136412E26DD7400F14857 /* StyleEditorView.swift in Sources */,
+				789136422E26DD7400F14857 /* ZenlyticStyleEditorApp.swift in Sources */,
+				789136432E26DD7400F14857 /* SidebarView.swift in Sources */,
+				789136442E26DD7400F14857 /* PreviewPanel.swift in Sources */,
+				789136452E26DD7400F14857 /* StyleEditorViewModel.swift in Sources */,
+				789136462E26DD7400F14857 /* ContentView.swift in Sources */,
+				789136472E26DD7400F14857 /* SnippetOutputView.swift in Sources */,
+				789136482E26DD7400F14857 /* PaletteEditorView.swift in Sources */,
+				789136492E26DD7400F14857 /* StyleModels.swift in Sources */,
+				7891364A2E26DD7400F14857 /* StyleKeyRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		780ADC3D2E26D8BD00898757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BQDYUFBWBF;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		780ADC3E2E26D8BD00898757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BQDYUFBWBF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		780ADC402E26D8BD00898757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZenlyticStyleEditor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BQDYUFBWBF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ZenlyticStyleEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		780ADC412E26D8BD00898757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZenlyticStyleEditor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BQDYUFBWBF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ZenlyticStyleEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		780ADC2E2E26D8BC00898757 /* Build configuration list for PBXProject "ZenlyticStyleEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780ADC3D2E26D8BD00898757 /* Debug */,
+				780ADC3E2E26D8BD00898757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		780ADC3F2E26D8BD00898757 /* Build configuration list for PBXNativeTarget "ZenlyticStyleEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780ADC402E26D8BD00898757 /* Debug */,
+				780ADC412E26D8BD00898757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 780ADC2B2E26D8BC00898757 /* Project object */;
+}
