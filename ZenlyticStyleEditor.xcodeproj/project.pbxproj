@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7891363F2E26DD7400F14857 /* interface_styles.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891362F2E26DD7400F14857 /* interface_styles.json */; };
-		7891364B2E26DD7400F14858 /* token_palette.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891364C2E26DD7400F14858 /* token_palette.json */; };
 		789136402E26DD7400F14857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7891362B2E26DD7400F14857 /* Assets.xcassets */; };
 		789136412E26DD7400F14857 /* StyleEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136372E26DD7400F14857 /* StyleEditorView.swift */; };
 		789136422E26DD7400F14857 /* ZenlyticStyleEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */; };
@@ -20,6 +19,7 @@
 		789136482E26DD7400F14857 /* PaletteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136332E26DD7400F14857 /* PaletteEditorView.swift */; };
 		789136492E26DD7400F14857 /* StyleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891362D2E26DD7400F14857 /* StyleModels.swift */; };
 		7891364A2E26DD7400F14857 /* StyleKeyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136382E26DD7400F14857 /* StyleKeyRow.swift */; };
+		7891364B2E26DD7400F14858 /* token_palette.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891364C2E26DD7400F14858 /* token_palette.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		7891362C2E26DD7400F14857 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7891362D2E26DD7400F14857 /* StyleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModels.swift; sourceTree = "<group>"; };
 		7891362F2E26DD7400F14857 /* interface_styles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interface_styles.json; sourceTree = "<group>"; };
-		7891364C2E26DD7400F14858 /* token_palette.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_palette.json; sourceTree = "<group>"; };
 		789136312E26DD7400F14857 /* StyleEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleEditorViewModel.swift; sourceTree = "<group>"; };
 		789136332E26DD7400F14857 /* PaletteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditorView.swift; sourceTree = "<group>"; };
 		789136342E26DD7400F14857 /* PreviewPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPanel.swift; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		7891363A2E26DD7400F14857 /* ZenlyticStyleEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZenlyticStyleEditor.entitlements; sourceTree = "<group>"; };
 		7891363B2E26DD7400F14857 /* ZenlyticStyleEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZenlyticStyleEditor.xcodeproj; sourceTree = "<group>"; };
 		7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyticStyleEditorApp.swift; sourceTree = "<group>"; };
+		7891364C2E26DD7400F14858 /* token_palette.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_palette.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ZenlyticStyleEditor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,6 +349,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ZenlyticStyleEditor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -375,6 +378,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
