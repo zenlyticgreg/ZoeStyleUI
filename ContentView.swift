@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = StyleEditorViewModel()
     
+    init() {
+        print("ContentView: Initializing...")
+    }
+    
     var body: some View {
         NavigationSplitView {
             SidebarView(viewModel: viewModel)

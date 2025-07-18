@@ -13,5 +13,8 @@ struct ZenlyticStyleEditorApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
+        .defaultSize(width: 1200, height: 800)
     }
 }

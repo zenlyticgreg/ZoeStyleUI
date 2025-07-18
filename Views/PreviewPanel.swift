@@ -109,7 +109,7 @@ struct ChatPreview: View {
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
-                .background(Color(NSColor.controlAlternatingRowBackgroundColors[0]))
+                .background(Color(NSColor.controlBackgroundColor))
                 .cornerRadius(12)
                 
                 HStack {
