@@ -18,13 +18,40 @@ class StyleEditorViewModel: ObservableObject {
     }
     
     private func loadTokenPalette() {
-        if let url = Bundle.main.url(forResource: "token_palette", withExtension: "json"),
-           let data = try? Data(contentsOf: url),
-           let palette = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
-            self.tokenPalette = palette
-            print("StyleEditorViewModel: Token palette loaded successfully")
+        print("StyleEditorViewModel: Attempting to load token palette...")
+        
+        // Check if the file exists in the bundle
+        if let url = Bundle.main.url(forResource: "token_palette", withExtension: "json") {
+            print("StyleEditorViewModel: Found token_palette.json at: \(url)")
+            
+            do {
+                let data = try Data(contentsOf: url)
+                print("StyleEditorViewModel: Successfully read \(data.count) bytes from token_palette.json")
+                
+                if let palette = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                    self.tokenPalette = palette
+                    print("StyleEditorViewModel: Token palette loaded successfully with \(palette.count) top-level keys")
+                } else {
+                    print("StyleEditorViewModel: Failed to parse token_palette.json as dictionary")
+                    loadFallbackTokenPalette()
+                }
+            } catch {
+                print("StyleEditorViewModel: Error reading token_palette.json: \(error)")
+                loadFallbackTokenPalette()
+            }
         } else {
-            print("StyleEditorViewModel: Failed to load token palette, using fallback")
+            print("StyleEditorViewModel: token_palette.json not found in bundle")
+            print("StyleEditorViewModel: Available resources in bundle:")
+            if let resourcePath = Bundle.main.resourcePath {
+                do {
+                    let files = try FileManager.default.contentsOfDirectory(atPath: resourcePath)
+                    for file in files.sorted() {
+                        print("StyleEditorViewModel:   - \(file)")
+                    }
+                } catch {
+                    print("StyleEditorViewModel: Error listing bundle contents: \(error)")
+                }
+            }
             loadFallbackTokenPalette()
         }
     }

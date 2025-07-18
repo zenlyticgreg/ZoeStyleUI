@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7891363F2E26DD7400F14857 /* interface_styles.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891362F2E26DD7400F14857 /* interface_styles.json */; };
+		7891364B2E26DD7400F14858 /* token_palette.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891364C2E26DD7400F14858 /* token_palette.json */; };
 		789136402E26DD7400F14857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7891362B2E26DD7400F14857 /* Assets.xcassets */; };
 		789136412E26DD7400F14857 /* StyleEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136372E26DD7400F14857 /* StyleEditorView.swift */; };
 		789136422E26DD7400F14857 /* ZenlyticStyleEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */; };
@@ -27,6 +28,7 @@
 		7891362C2E26DD7400F14857 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7891362D2E26DD7400F14857 /* StyleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModels.swift; sourceTree = "<group>"; };
 		7891362F2E26DD7400F14857 /* interface_styles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interface_styles.json; sourceTree = "<group>"; };
+		7891364C2E26DD7400F14858 /* token_palette.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_palette.json; sourceTree = "<group>"; };
 		789136312E26DD7400F14857 /* StyleEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleEditorViewModel.swift; sourceTree = "<group>"; };
 		789136332E26DD7400F14857 /* PaletteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditorView.swift; sourceTree = "<group>"; };
 		789136342E26DD7400F14857 /* PreviewPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPanel.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7891362F2E26DD7400F14857 /* interface_styles.json */,
+				7891364C2E26DD7400F14858 /* token_palette.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7891363F2E26DD7400F14857 /* interface_styles.json in Resources */,
+				7891364B2E26DD7400F14858 /* token_palette.json in Resources */,
 				789136402E26DD7400F14857 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
