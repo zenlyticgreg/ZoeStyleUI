@@ -4,8 +4,8 @@
     "label": "Avatar",
     "comment": "User avatar in the sidebar (bottom left)",
     "keys": [
-      {"id": "background_color", "label": "Background Color", "type": "string", "value": "background.brand.primary.normal", "comment": null},
-      {"id": "color", "label": "Color", "type": "string", "value": "text.base.level800", "comment": null}
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "background.brand.primary.normal", "comment": null},
+      {"id": "color", "label": "Color", "type": "color", "value": "text.base.level800", "comment": null}
     ]
   },
   {
@@ -13,9 +13,9 @@
     "label": "Chat",
     "comment": "Main chat panel, including chatbox, messages, suggestions, feedback, and related UI.",
     "keys": [
-      {"id": "background_color", "label": "Background Color", "type": "string", "value": "background.base.level020", "comment": null},
-      {"id": "color", "label": "Text Color", "type": "string", "value": "text.base.level800", "comment": null},
-      {"id": "secondary_color", "label": "Secondary Color", "type": "string", "value": "text.base.level300", "comment": null}
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "background.base.level020", "comment": null},
+      {"id": "color", "label": "Text Color", "type": "color", "value": "text.base.level800", "comment": null},
+      {"id": "secondary_color", "label": "Secondary Color", "type": "color", "value": "text.base.level300", "comment": null}
     ]
   },
   {
@@ -23,26 +23,32 @@
     "label": "Chatbox",
     "comment": "Input area at the bottom of the chat panel.",
     "keys": [
-      {"id": "background_color", "label": "Background Color", "type": "string", "value": "background.base.level000", "comment": null},
-      {"id": "border_color", "label": "Border Color", "type": "string", "value": "border.action.secondary.normal", "comment": null},
-      {"id": "border_radius", "label": "Border Radius", "type": "string", "value": "lg", "comment": null}
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "background.base.level000", "comment": null},
+      {"id": "border_color", "label": "Border Color", "type": "color", "value": "border.action.secondary.normal", "comment": null},
+      {"id": "border_radius", "label": "Border Radius", "type": "borderRadius", "value": "lg", "comment": null}
     ]
   },
   {
     "id": "dashboard",
     "label": "Dashboard",
     "comment": "Dashboard list and controls (search, new dashboard button, folders).",
-    "keys": []
+    "keys": [
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "background.base.level000", "comment": "Main dashboard background"},
+      {"id": "card_background_color", "label": "Card Background Color", "type": "color", "value": "background.base.level020", "comment": "Background for dashboard cards"},
+      {"id": "text_color", "label": "Text Color", "type": "color", "value": "text.base.level800", "comment": "Primary text color"},
+      {"id": "border_color", "label": "Border Color", "type": "color", "value": "border.base.level060", "comment": "Border color for cards and sections"},
+      {"id": "accent_color", "label": "Accent Color", "type": "color", "value": "blue.500", "comment": "Accent color for highlights and buttons"}
+    ]
   },
   {
     "id": "nav",
     "label": "Navigation Sidebar",
     "comment": "Sidebar navigation (left side of app).",
     "keys": [
-      {"id": "background_color", "label": "Background Color", "type": "string", "value": "gray.700", "comment": null},
-      {"id": "border_color", "label": "Border Color", "type": "string", "value": "gray.600", "comment": null},
-      {"id": "color", "label": "Text Color", "type": "string", "value": "gray.100", "comment": null},
-      {"id": "divider_color", "label": "Divider Color", "type": "string", "value": "gray.600", "comment": null}
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "gray.700", "comment": null},
+      {"id": "border_color", "label": "Border Color", "type": "color", "value": "gray.600", "comment": null},
+      {"id": "color", "label": "Text Color", "type": "color", "value": "gray.100", "comment": null},
+      {"id": "divider_color", "label": "Divider Color", "type": "color", "value": "gray.600", "comment": null}
     ]
   },
   {
@@ -50,8 +56,8 @@
     "label": "Login Page",
     "comment": "Login page (background, text, input fields).",
     "keys": [
-      {"id": "background_color", "label": "Background Color", "type": "string", "value": "background.base.level000", "comment": null},
-      {"id": "color", "label": "Text Color", "type": "string", "value": "text.base.level800", "comment": null}
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "background.base.level000", "comment": null},
+      {"id": "color", "label": "Text Color", "type": "color", "value": "text.base.level800", "comment": null}
     ]
   },
   {
@@ -59,9 +65,9 @@
     "label": "Embed Menu",
     "comment": "Embed/share menu popovers and tooltips.",
     "keys": [
-      {"id": "background_color", "label": "Background Color", "type": "string", "value": "background.base.level000", "comment": null},
-      {"id": "border_color", "label": "Border Color", "type": "string", "value": "border.base.level060", "comment": null},
-      {"id": "color", "label": "Text Color", "type": "string", "value": "text.base.level800", "comment": null}
+      {"id": "background_color", "label": "Background Color", "type": "color", "value": "background.base.level000", "comment": null},
+      {"id": "border_color", "label": "Border Color", "type": "color", "value": "border.base.level060", "comment": null},
+      {"id": "color", "label": "Text Color", "type": "color", "value": "text.base.level800", "comment": null}
     ]
   },
   {

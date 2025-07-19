@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 enum StyleType: String, Codable, Hashable {
-    case color, font, string, number, bool
+    case color, font, string, number, bool, borderRadius
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()

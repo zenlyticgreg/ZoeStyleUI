@@ -164,7 +164,7 @@ struct StylePropertiesSection: View {
                 GridItem(.flexible())
             ], spacing: 16) {
                 ForEach(component.keys) { key in
-                    StyleKeyRow(key: key, viewModel: viewModel)
+                    StyleKeyRow(viewModel: viewModel, keyId: key.id)
                 }
             }
         }

@@ -1,50 +1,68 @@
 import SwiftUI
 
 struct SnippetOutputView: View {
-    let styleSnippet: String
-    let tokenSnippet: String
-    @State private var selectedTab: Int = 0
+    @ObservedObject var viewModel: StyleEditorViewModel
 
     var body: some View {
         VStack(alignment: .leading) {
-            Picker("Snippet Type", selection: $selectedTab) {
-                Text("Component Styles").tag(0)
-                Text("Palette Tokens").tag(1)
+            Text("JSON Output:")
+                .font(.headline)
+            
+            ScrollView(.horizontal) {
+                Text(viewModel.currentSnippet)
+                    .font(.system(.body, design: .monospaced))
+                    .padding()
+                    .background(Color(.controlBackgroundColor))
+                    .cornerRadius(8)
+                    .onChange(of: viewModel.currentSnippet) { oldValue, newValue in
+                        print("SnippetOutputView: currentSnippet changed")
+                        print("SnippetOutputView: Old snippet: \(oldValue)")
+                        print("SnippetOutputView: New snippet: \(newValue)")
+                    }
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding(.bottom, 4)
-            if selectedTab == 0 {
-                Text("JSON Snippet to Copy (Component Styles):")
-                    .font(.headline)
-                ScrollView(.horizontal) {
-                    Text(styleSnippet)
-                        .font(.system(.body, design: .monospaced))
-                        .padding()
-                        .background(Color(.controlBackgroundColor))
-                        .cornerRadius(8)
-                }
+            .onChange(of: viewModel.changedTokens.count) { _, _ in
+                print("SnippetOutputView: changedTokens count changed")
+            }
+            .onChange(of: viewModel.selectedComponent?.keys.count) { _, _ in
+                print("SnippetOutputView: selectedComponent keys count changed")
+            }
+            .onChange(of: viewModel.selectedComponent?.keys.first?.value) { _, _ in
+                print("SnippetOutputView: selectedComponent first key value changed")
+            }
+            
+            HStack {
                 Button("Copy to Clipboard") {
                     NSPasteboard.general.clearContents()
-                    NSPasteboard.general.setString(styleSnippet, forType: .string)
+                    NSPasteboard.general.setString(viewModel.currentSnippet, forType: .string)
                 }
-                .padding(.top, 4)
-            } else {
-                Text("JSON Snippet to Copy (Palette Tokens):")
-                    .font(.headline)
-                ScrollView(.horizontal) {
-                    Text(tokenSnippet)
-                        .font(.system(.body, design: .monospaced))
-                        .padding()
-                        .background(Color(.controlBackgroundColor))
-                        .cornerRadius(8)
+                
+                Button("Test Update") {
+                    print("SnippetOutputView: Manual test update triggered")
+                    print("SnippetOutputView: Current snippet: \(viewModel.currentSnippet)")
+                    print("SnippetOutputView: Selected component: \(viewModel.selectedComponent?.id ?? "nil")")
+                    if let component = viewModel.selectedComponent {
+                        print("SnippetOutputView: Component keys: \(component.keys.map { "\($0.id)=\($0.value)" })")
+                    }
                 }
-                Button("Copy to Clipboard") {
-                    NSPasteboard.general.clearContents()
-                    NSPasteboard.general.setString(tokenSnippet, forType: .string)
-                }
-                .padding(.top, 4)
             }
+            .padding(.top, 4)
         }
         .padding()
+        .onAppear {
+            print("SnippetOutputView: onAppear")
+        }
+        .onChange(of: viewModel.selectedComponent?.id) { oldId, newId in
+            print("SnippetOutputView: selectedComponent changed from \(oldId ?? "nil") to \(newId ?? "nil")")
+        }
+        .onChange(of: viewModel.selectedComponent?.keys) { oldKeys, newKeys in
+            print("SnippetOutputView: selectedComponent keys changed")
+            print("SnippetOutputView: Old keys count: \(oldKeys?.count ?? 0)")
+            print("SnippetOutputView: New keys count: \(newKeys?.count ?? 0)")
+            if let newKeys = newKeys {
+                for key in newKeys {
+                    print("SnippetOutputView: Key \(key.id) = \(key.value)")
+                }
+            }
+        }
     }
 } 

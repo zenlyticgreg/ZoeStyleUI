@@ -6,6 +6,7 @@ class StyleEditorViewModel: ObservableObject {
     @Published var selectedComponent: StyleComponent?
     @Published var previewMode: PreviewMode = .light
     @Published var changedTokens: Set<String> = []
+    @Published var currentSnippet: String = ""
     
     private var tokenPalette: [String: Any] = [:]
     
@@ -137,22 +138,46 @@ class StyleEditorViewModel: ObservableObject {
     
     func selectComponent(_ component: StyleComponent) {
         selectedComponent = component
+        currentSnippet = snippetForSelectedComponent
         print("StyleEditorViewModel: Selected component: \(component.label)")
+        print("StyleEditorViewModel: Initialized currentSnippet for \(component.id)")
     }
     
     func updateStyleValue(keyId: String, newValue: String) {
+        print("StyleEditorViewModel: updateStyleValue called for \(keyId) with value \(newValue)")
+        
         guard let componentIndex = components.firstIndex(where: { $0.id == selectedComponent?.id }),
               let keyIndex = components[componentIndex].keys.firstIndex(where: { $0.id == keyId }) else {
+            print("StyleEditorViewModel: Could not find component or key for \(keyId)")
+            if let component = selectedComponent {
+                print("StyleEditorViewModel: Available keys in \(component.id): \(component.keys.map { $0.id })")
+            }
             return
         }
         
+        print("StyleEditorViewModel: Found component at index \(componentIndex), key at index \(keyIndex)")
+        print("StyleEditorViewModel: Old value: \(components[componentIndex].keys[keyIndex].value)")
+        
+        // Update the component in the array
         components[componentIndex].keys[keyIndex].value = newValue
         changedTokens.insert(keyId)
         
-        // Update selected component reference
-        selectedComponent = components[componentIndex]
+        print("StyleEditorViewModel: Updated value to: \(components[componentIndex].keys[keyIndex].value)")
         
-        print("StyleEditorViewModel: Updated \(keyId) to \(newValue)")
+        // Force a UI update by reassigning the selected component
+        let updatedComponent = components[componentIndex]
+        selectedComponent = updatedComponent
+        
+        print("StyleEditorViewModel: Reassigned selectedComponent")
+        
+        // Update the current snippet
+        currentSnippet = snippetForSelectedComponent
+        
+        // Trigger objectWillChange to ensure SwiftUI updates
+        objectWillChange.send()
+        
+        print("StyleEditorViewModel: Sent objectWillChange")
+        print("StyleEditorViewModel: Updated currentSnippet: \(currentSnippet)")
     }
     
     func getResolvedValue(for keyId: String) -> String? {
@@ -186,8 +211,14 @@ class StyleEditorViewModel: ObservableObject {
         return current as? String
     }
     
-    func snippetForSelectedComponent() -> String {
-        guard let component = selectedComponent else { return "" }
+    var snippetForSelectedComponent: String {
+        guard let component = selectedComponent else { 
+            print("StyleEditorViewModel: No selected component for snippet")
+            return "" 
+        }
+        
+        print("StyleEditorViewModel: Generating snippet for component \(component.id) with \(component.keys.count) keys")
+        print("StyleEditorViewModel: Changed tokens: \(changedTokens)")
         
         var snippet = "{\n"
         snippet += "  \"id\": \"\(component.id)\",\n"
@@ -195,6 +226,8 @@ class StyleEditorViewModel: ObservableObject {
         snippet += "  \"keys\": [\n"
         
         for (index, key) in component.keys.enumerated() {
+            let isChanged = changedTokens.contains(key.id)
+            print("StyleEditorViewModel: Key \(key.id) = \(key.value) (changed: \(isChanged))")
             snippet += "    {\n"
             snippet += "      \"id\": \"\(key.id)\",\n"
             snippet += "      \"label\": \"\(key.label)\",\n"
@@ -219,6 +252,8 @@ class StyleEditorViewModel: ObservableObject {
         }
         
         snippet += "\n}"
+        
+        print("StyleEditorViewModel: Generated snippet: \(snippet)")
         return snippet
     }
     
@@ -226,12 +261,13 @@ class StyleEditorViewModel: ObservableObject {
         guard !changedTokens.isEmpty else { return "" }
         
         var snippet = "{\n"
-        snippet += "  \"updated_tokens\": {\n"
+        snippet += "  \"component_updates\": {\n"
+        snippet += "    \"\(selectedComponent?.id ?? "")\": {\n"
         
         for (index, tokenId) in changedTokens.enumerated() {
             if let component = selectedComponent,
                let key = component.keys.first(where: { $0.id == tokenId }) {
-                snippet += "    \"\(tokenId)\": \"\(key.value)\""
+                snippet += "      \"\(tokenId)\": \"\(key.value)\""
                 if index < changedTokens.count - 1 {
                     snippet += ","
                 }
@@ -239,6 +275,7 @@ class StyleEditorViewModel: ObservableObject {
             }
         }
         
+        snippet += "    }\n"
         snippet += "  }\n"
         snippet += "}"
         return snippet

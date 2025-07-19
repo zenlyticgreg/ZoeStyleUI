@@ -15,39 +15,39 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ZStack {
-            // Force a visible background
-            Color.red.opacity(0.1)
-                .ignoresSafeArea()
-            
-            NavigationSplitView {
-                SidebarView(viewModel: viewModel)
-            } content: {
-                StyleEditorView(viewModel: viewModel)
-            } detail: {
-                if let selectedComponent = viewModel.selectedComponent {
-                    VStack {
-                        PreviewPanel(component: selectedComponent, previewMode: viewModel.previewMode)
-                        SnippetOutputView(
-                            styleSnippet: viewModel.snippetForSelectedComponent(),
-                            tokenSnippet: viewModel.snippetForChangedTokens()
-                        )
-                    }
-                } else {
-                    Text("Select a component to edit")
+        Group {
+            if viewModel.components.isEmpty {
+                // Fallback view while loading
+                VStack {
+                    Text("Loading Zenlytic Style Editor...")
+                        .font(.title)
                         .foregroundColor(.secondary)
+                    ProgressView()
+                        .padding()
                 }
-            }
-            .navigationTitle("Zenlytic Style Editor")
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Picker("Preview Mode", selection: $viewModel.previewMode) {
-                        Text("Light").tag(PreviewMode.light)
-                        Text("Dark").tag(PreviewMode.dark)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                NavigationSplitView {
+                    SidebarView(viewModel: viewModel)
+                } content: {
+                    StyleEditorView(viewModel: viewModel)
+                } detail: {
+                    if let selectedComponent = viewModel.selectedComponent {
+                        VStack {
+                            PreviewPanel(component: selectedComponent, previewMode: viewModel.previewMode)
+                            SnippetOutputView(viewModel: viewModel)
+                        }
+                    } else {
+                        Text("Select a component to edit")
+                            .foregroundColor(.secondary)
                     }
-                    .pickerStyle(SegmentedPickerStyle())
                 }
+                .navigationTitle("Zenlytic Style Editor")
             }
+        }
+        .frame(minWidth: 1200, minHeight: 800)
+        .onAppear {
+            print("ContentView: onAppear called")
         }
     }
 }
