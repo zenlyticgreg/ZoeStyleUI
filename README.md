@@ -1,141 +1,118 @@
 # Zenlytic Style Editor
 
-A modern macOS SwiftUI application for visually editing Zoe interface styles with real-time preview and semantic token support.
+A macOS SwiftUI application for editing interface styles and generating style snippets.
 
-## 🎨 Features
+## Features
 
-### Modern User Interface
-- **Color Palette Picker**: Advanced color selection with preset palette and hex support
-- **Real-time Preview**: Live preview of Zoe UI components in both light and dark modes
-- **Component-based Editing**: Edit individual UI components (chatbox, avatar, dashboard, etc.)
-- **Visual Feedback**: Immediate visual updates as you edit styles
+- Visual style editor for interface components
+- Real-time preview of style changes
+- JSON snippet generation
+- Color picker integration
+- Border radius controls
+- Token-based styling system
 
-### Style Management
-- **Semantic Token Support**: Resolves design tokens to actual color values
-- **JSON Integration**: Loads and saves styles from `interface_styles.json`
-- **Token Palette**: Comprehensive color and design token system
-- **Safe Updates**: Generate JSON snippets for safe style updates
+## Running the App
 
-### Supported Components
-- **Chatbox**: Chat input area styling
-- **Chat**: Main chat panel styling
-- **Avatar**: User avatar styling
-- **Dashboard**: Dashboard interface styling
-- **Navigation**: Navigation elements styling
-- **Login**: Authentication interface styling
-- **Embed Menu**: Embed functionality styling
-- **Explore**: Search and exploration interface styling
+### From Xcode (Recommended)
 
-## 🚀 Getting Started
+1. Open `ZenlyticStyleEditor.xcodeproj` in Xcode
+2. Select the "ZenlyticStyleEditor" target
+3. Choose your Mac as the destination device
+4. Click the "Run" button (▶️) or press `Cmd+R`
 
-### Prerequisites
-- macOS 15.5 or later
-- Xcode 16.0 or later
-- Swift 5.0 or later
+The app should launch and display the style editor interface.
 
-### Installation
+### Troubleshooting Launch Issues
 
-1. Clone the repository:
-```bash
-git clone https://github.com/zenlyticgreg/ZoeStyleUI.git
-cd ZoeStyleUI
-```
+If the app doesn't launch from Xcode, try these steps:
 
-2. Open the project in Xcode:
-```bash
-open ZenlyticStyleEditor.xcodeproj
-```
+1. **Clean Build Folder**: In Xcode, go to `Product` → `Clean Build Folder` (or press `Cmd+Shift+K`)
+2. **Reset Package Caches**: In Xcode, go to `File` → `Packages` → `Reset Package Caches`
+3. **Check Code Signing**: Ensure code signing is set to "Manual" in the project settings
+4. **Verify Entitlements**: The app uses minimal entitlements to avoid sandboxing issues
 
-3. Build and run the application:
-   - Select the "ZenlyticStyleEditor" scheme
-   - Press `Cmd + R` to build and run
+### Debugger Stopping on Launch (Permanent Fix)
 
-## 📁 Project Structure
+If Xcode stops at a breakpoint when launching the app:
+
+#### Quick Fix:
+- **Click the Continue button (▶️)** in the debugger toolbar
+- Or press **Cmd+Option+P** to continue execution
+
+#### Permanent Fix:
+1. **Run the reset script**: `./reset_xcode_debugger.sh`
+2. **Close Xcode completely**
+3. **Reopen the project**
+4. **Run the app** - it should launch without stopping
+
+#### Manual Fix:
+1. **Remove All Breakpoints**: Debug → Breakpoints → Remove All Breakpoints
+2. **Toggle Breakpoints Off**: Press **Cmd+Y** to disable breakpoints
+3. **Check Exception Breakpoints**: In Breakpoint Navigator, disable any exception breakpoints
+
+### Recent Fixes Applied
+
+The following changes were made to ensure the app launches properly from Xcode:
+
+- **Code Signing**: Changed from "Automatic" to "Manual" to avoid signing issues
+- **Hardened Runtime**: Disabled to prevent launch restrictions
+- **Development Team**: Removed to avoid team-specific signing requirements
+- **Bundle Identifier**: Updated to `com.zenlytic.styleeditor`
+- **App Delegate**: Simplified window management to prevent launch hangs
+- **Info.plist**: Added explicit Info.plist file for proper app metadata
+- **Debugger Configuration**: Added settings to prevent unwanted debugger stops
+
+## Project Structure
 
 ```
 ZenlyticStyleEditor/
 ├── Models/
 │   └── StyleModels.swift          # Data models for styles and components
 ├── ViewModels/
-│   └── StyleEditorViewModel.swift # Main view model with business logic
+│   └── StyleEditorViewModel.swift # Main view model and business logic
 ├── Views/
-│   ├── StyleEditorView.swift      # Main style editing interface
-│   ├── StyleKeyRow.swift          # Individual style property editor
-│   ├── PreviewPanel.swift         # Live component preview
+│   ├── StyleEditorView.swift      # Main editor interface
 │   ├── SidebarView.swift          # Component selection sidebar
-│   └── SnippetOutputView.swift    # JSON snippet output
+│   ├── PreviewPanel.swift         # Live preview of selected component
+│   ├── SnippetOutputView.swift    # JSON snippet output
+│   ├── PaletteEditorView.swift    # Color palette editor
+│   └── StyleKeyRow.swift          # Individual style key editor
 ├── Resources/
-│   ├── interface_styles.json      # Zoe interface style definitions
-│   └── token_palette.json         # Design token palette
-└── ContentView.swift              # Main app interface
+│   ├── interface_styles.json      # Sample interface styles
+│   └── token_palette.json         # Color and token definitions
+├── Assets.xcassets/               # App icons and assets
+├── ContentView.swift              # Main content view
+├── ZenlyticStyleEditorApp.swift   # App entry point
+├── Info.plist                     # App metadata
+└── reset_xcode_debugger.sh        # Script to reset debugger state
 ```
 
-## 🎯 Usage
+## Development
 
-### Editing Styles
-1. **Select a Component**: Choose a component from the sidebar
-2. **Edit Properties**: Modify style properties using the modern interface
-3. **Preview Changes**: See real-time updates in the preview panel
-4. **Generate Snippets**: Copy JSON snippets for safe deployment
+The app is built with SwiftUI and follows the MVVM pattern:
 
-### Color Selection
-- **Click Color Squares**: Open the advanced color picker
-- **Use Preset Palette**: Select from 18 common colors
-- **Hex Input**: Enter custom hex color values
-- **Token Resolution**: See resolved semantic token values
-
-### Preview Modes
-- **Light Mode**: Preview in light theme
-- **Dark Mode**: Preview in dark theme
-- **Component-specific**: Each component shows realistic Zoe UI previews
-
-## 🔧 Technical Details
-
-### Architecture
-- **SwiftUI**: Modern declarative UI framework
-- **MVVM Pattern**: Clean separation of concerns
-- **ObservableObject**: Reactive data binding
-- **Semantic Tokens**: Design system integration
+- **Models**: Define the data structures for styles, components, and tokens
+- **ViewModels**: Handle business logic and state management
+- **Views**: Provide the user interface using SwiftUI
 
 ### Key Components
-- **StyleKeyRow**: Modern card-based property editor
-- **ColorPickerSheet**: Full-screen color selection
-- **PreviewPanel**: Realistic Zoe UI previews
-- **Token Resolution**: Semantic token to value mapping
 
-### Data Flow
-1. Load `interface_styles.json` and `token_palette.json`
-2. Resolve semantic tokens to actual values
-3. Present editable interface with live preview
-4. Generate JSON snippets for updates
+- **StyleEditorViewModel**: Manages the main app state, loads data, and handles style updates
+- **StyleComponent**: Represents a UI component with configurable style keys
+- **StyleKey**: Individual style properties (colors, border radius, etc.)
+- **Token System**: References to predefined design tokens for consistent styling
 
-## 🎨 Design System
+## Data Files
 
-The app uses a comprehensive design system with:
-- **Semantic Tokens**: `background.brand.primary.normal`, `text.base.level800`
-- **Color Palette**: 18 preset colors + custom hex support
-- **Modern UI**: Rounded corners, shadows, and smooth animations
-- **Responsive Layout**: Adapts to different screen sizes
+The app loads two main JSON files:
 
-## 📝 Contributing
+1. **interface_styles.json**: Contains component definitions with their style keys
+2. **token_palette.json**: Contains the design token system (colors, spacing, etc.)
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+These files are bundled with the app and loaded at startup.
 
-## 📄 License
+## Requirements
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Contact the development team
-- Check the documentation
-
----
-
-**Built with ❤️ for the Zoe interface team** 
+- macOS 15.5 or later
+- Xcode 16.4 or later
+- Swift 5.0+ 

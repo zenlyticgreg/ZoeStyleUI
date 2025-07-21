@@ -103,12 +103,15 @@ struct ColorValueEditor: View {
     private var key: StyleKey? {
         let foundKey = viewModel.selectedComponent?.keys.first { $0.id == keyId }
         print("ColorValueEditor: Looking for keyId '\(keyId)', found: \(foundKey?.value ?? "nil")")
+        print("ColorValueEditor: Current component: \(viewModel.selectedComponent?.id ?? "nil")")
+        print("ColorValueEditor: Available keys: \(viewModel.selectedComponent?.keys.map { $0.id } ?? [])")
         return foundKey
     }
     
     var body: some View {
-        if viewModel.selectedComponent?.keys.first(where: { $0.id == keyId }) != nil {
-            VStack(alignment: .leading, spacing: 8) {
+        // Always show the color picker for color keys, even if the key doesn't exist yet
+        // This ensures the UI is always available
+        VStack(alignment: .leading, spacing: 8) {
                 // Color preview and picker button
                 HStack(spacing: 8) {
                     // Color preview
@@ -134,7 +137,9 @@ struct ColorValueEditor: View {
                                 selectedColor = color
                             }
                             // Update the value immediately
+                            print("ColorValueEditor: About to call updateStyleValue for keyId: \(keyId) with value: \(newValue)")
                             viewModel.updateStyleValue(keyId: keyId, newValue: newValue)
+                            print("ColorValueEditor: updateStyleValue call completed for keyId: \(keyId)")
                         }
                     ))
                     .textFieldStyle(ModernTextFieldStyle())
@@ -172,8 +177,10 @@ struct ColorValueEditor: View {
                                 selectedColor = color
                                 let hexValue = color.toHex() ?? "#000000"
                                 print("ColorValueEditor: Color picker selected \(hexValue)")
+                                print("ColorValueEditor: About to call updateStyleValue for keyId: \(keyId)")
                                 // Update the value immediately
                                 viewModel.updateStyleValue(keyId: keyId, newValue: hexValue)
+                                print("ColorValueEditor: updateStyleValue call completed")
                                 showColorPicker = false
                             }
                         )
@@ -198,7 +205,7 @@ struct ColorValueEditor: View {
                 // Initialize the color picker with the current value
                 let currentValue = viewModel.selectedComponent?.keys.first { $0.id == keyId }?.value ?? ""
                 selectedColor = Color(hex: currentValue) ?? .gray
-                print("ColorValueEditor: onAppear with value \(currentValue)")
+                print("ColorValueEditor: onAppear with value \(currentValue) for keyId \(keyId)")
             }
             .onChange(of: viewModel.selectedComponent) { _, _ in
                 // Update the color picker when the value changes externally
@@ -206,10 +213,6 @@ struct ColorValueEditor: View {
                 selectedColor = Color(hex: currentValue) ?? .gray
                 print("ColorValueEditor: onChange detected for \(keyId) to \(currentValue)")
             }
-        } else {
-            Text("Key not found: \(keyId)")
-                .foregroundColor(.red)
-        }
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppKit
 
 struct ContentView: View {
     @StateObject private var viewModel = StyleEditorViewModel()

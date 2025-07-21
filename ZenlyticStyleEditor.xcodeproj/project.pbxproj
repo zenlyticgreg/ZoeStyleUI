@@ -20,6 +20,7 @@
 		789136492E26DD7400F14857 /* StyleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891362D2E26DD7400F14857 /* StyleModels.swift */; };
 		7891364A2E26DD7400F14857 /* StyleKeyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789136382E26DD7400F14857 /* StyleKeyRow.swift */; };
 		7891364B2E26DD7400F14858 /* token_palette.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891364C2E26DD7400F14858 /* token_palette.json */; };
+		7891364E2E26DD7400F14859 /* json_orig.json in Resources */ = {isa = PBXBuildFile; fileRef = 7891364F2E26DD7400F14859 /* json_orig.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +39,9 @@
 		7891363A2E26DD7400F14857 /* ZenlyticStyleEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZenlyticStyleEditor.entitlements; sourceTree = "<group>"; };
 		7891363B2E26DD7400F14857 /* ZenlyticStyleEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZenlyticStyleEditor.xcodeproj; sourceTree = "<group>"; };
 		7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyticStyleEditorApp.swift; sourceTree = "<group>"; };
+		7891364D2E26DD7400F14859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7891364C2E26DD7400F14858 /* token_palette.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_palette.json; sourceTree = "<group>"; };
+		7891364F2E26DD7400F14859 /* json_orig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = json_orig.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 				7891363A2E26DD7400F14857 /* ZenlyticStyleEditor.entitlements */,
 				7891363B2E26DD7400F14857 /* ZenlyticStyleEditor.xcodeproj */,
 				7891363C2E26DD7400F14857 /* ZenlyticStyleEditorApp.swift */,
+				7891364D2E26DD7400F14859 /* Info.plist */,
 				780ADC342E26D8BC00898757 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +93,7 @@
 			children = (
 				7891362F2E26DD7400F14857 /* interface_styles.json */,
 				7891364C2E26DD7400F14858 /* token_palette.json */,
+				7891364F2E26DD7400F14859 /* json_orig.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			files = (
 				7891363F2E26DD7400F14857 /* interface_styles.json in Resources */,
 				7891364B2E26DD7400F14858 /* token_palette.json in Resources */,
+				7891364E2E26DD7400F14859 /* json_orig.json in Resources */,
 				789136402E26DD7400F14857 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +256,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = BQDYUFBWBF;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -314,7 +319,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = BQDYUFBWBF;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -342,13 +346,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ZenlyticStyleEditor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BQDYUFBWBF;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,11 +360,13 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ZenlyticStyleEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenlytic.styleeditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 			};
 			name = Debug;
 		};
@@ -371,13 +377,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ZenlyticStyleEditor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BQDYUFBWBF;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -385,7 +391,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ZenlyticStyleEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenlytic.styleeditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -1,0 +1,503 @@
+{
+	"avatar": {
+		"background_color": "background.brand.primary.normal",
+		"color": "text.base.level800"
+	},
+	"chat": {
+		"accordion": {
+			"background_color": "background.action.tertiary.normal",
+			"border_radius": "base",
+			"color": "text.base.level800",
+			"icon": {
+				"color": "text.base.level300"
+			},
+			"panel": {
+				"background_color": "background.action.tertiary.normal"
+			}
+		},
+		"background_color": "background.base.level020",
+		"chat_agent_avatar": {
+			"background": "background.action.primary.normal",
+			"src": ""
+		},
+		"chatbox": {
+			"background_color": "background.base.level000",
+			"border_color": "border.action.secondary.normal",
+			"border_radius": "lg",
+			"disabled": {
+				"background_color": "background.action.secondary.disabled"
+			},
+			"icon": {
+				"color": "text.base.level300"
+			}
+		},
+		"color": "text.base.level800",
+		"explore_chat_toggle": {
+			"background_color": "background.base.level000",
+			"border_color": "border.base.level060",
+			"border_radius": "full",
+			"icon": {
+				"active": {
+					"background_color": "background.action.tertiary.focused",
+					"color": "text.base.level800"
+				},
+				"color": "text.base.level400"
+			}
+		},
+		"feedback": {
+			"menu": {
+				"background_color": "background.base.level000",
+				"color": "text.base.level800",
+				"secondary_color": "background.action.secondary.selected",
+				"submit_button": {
+					"background_color": "background.base.level000",
+					"border_color": "border.base.level060",
+					"color": "text.base.level800",
+					"hover": {
+						"background_color": "background.action.secondary.hover"
+					}
+				},
+				"textarea": {
+					"background_color": "background.action.secondary.normal",
+					"border_color": "border.base.level060",
+					"border_radius": "base",
+					"color": "text.base.level800"
+				}
+			},
+			"response_text": {
+				"color": "var(--chakra-colors-text-base-level800)"
+			},
+			"submission_buttons": {
+				"active": {
+					"color": "var(--chakra-colors-text-base-level800)"
+				},
+				"color": "var(--chakra-colors-text-base-level300)",
+				"hover": {
+					"background_color": "background.action.secondary.hover"
+				}
+			}
+		},
+		"loading_indicator": {
+			"color": "var(--chakra-colors-gray-30)",
+			"secondary_color": "var(--chakra-colors-gray-300)"
+		},
+		"message": {
+			"background_color": "background.action.tertiary.normal",
+			"border_radius": "lg"
+		},
+		"recommended_content": {
+			"background_color": "background.base.level040"
+		},
+		"secondary_color": "text.base.level300",
+		"share_button": {
+			"background_color": "background.action.tertiary.normal",
+			"border_color": "border.action.tertiary.normal",
+			"color": "text.action.tertiary.normal"
+		},
+		"suggestion": {
+			"background_color": "background.action.tertiary.normal",
+			"border_color": "border.action.tertiary.normal",
+			"border_radius": "full",
+			"color": "text.action.tertiary.normal"
+		},
+		"welcome_text": {
+			"color": "text.base.level500"
+		}
+	},
+	"dashboard": {
+		"dashboard_folder": {
+			"selected_background_color": "background.action.tertiary.selected",
+			"selected_color": "text.action.tertiary.selected"
+		},
+		"dashboard_search": {
+			"background_color": "background.action.secondary.normal",
+			"border_color": "border.action.secondary.normal",
+			"color": "text.action.secondary.normal"
+		},
+		"new_dashboard_button": {
+			"background_color": "background.action.tertiary.normal",
+			"border_color": "border.action.tertiary.normal",
+			"color": "text.action.tertiary.normal"
+		}
+	},
+	"embed_menu": {
+		"background_color": "background.base.level000",
+		"border_color": "border.base.level060",
+		"color": "text.base.level800",
+		"icon": {
+			"color": "text.base.level300"
+		}
+	},
+	"explore": {
+		"run_button": {
+			"background_color": "background.action.primary.normal",
+			"border_color": "border.action.primary.normal",
+			"color": "text.action.primary.normal",
+			"hover_background_color": "background.action.primary.hover"
+		}
+	},
+	"layout": {
+		"site_dividers": {
+			"border_color": "gray.60",
+			"hovered_border_color": "gray.100"
+		}
+	},
+	"login": {
+		"background_color": "background.base.level000",
+		"color": "text.base.level800"
+	},
+	"nav": {
+		"background_color": "gray.700",
+		"border_color": "gray.600",
+		"color": "gray.100",
+		"divider_color": "gray.600",
+		"hover": {
+			"color": "gray.600"
+		},
+		"icon": {
+			"color": "gray.200",
+			"height": "3",
+			"width": "3"
+		},
+		"icons": {
+			"dashboards": null,
+			"data_model_editor": null,
+			"help": null,
+			"new_chat": null,
+			"new_explore": null,
+			"personal_fields": null,
+			"search": null,
+			"settings": null,
+			"workflows": null
+		},
+		"logo_image": {
+			"rectangle": "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2056.18'%3e%3cdefs%3e%3cstyle%3e.cls-1,.cls-2{fill:%23fff;}.cls-2{fill-rule:evenodd;}%3c/style%3e%3c/defs%3e%3cpath%20class='cls-2'%20d='M47,15.52l-25.29,25.31,5.17,5.17-10.17,10.17L1.18,40.63,26.51,15.27l-5.14-5.15L31.48,0l15.51,15.52Zm-5.34,25.57l-9.85,9.86-4.92-4.93,9.85-9.86,4.92,4.93ZM14.77,6.11L4.92,15.97,0,11.04,9.85,1.18l4.92,4.93Z'/%3e%3cpath%20class='cls-1'%20d='M65.81,18.49h15.81v4.1l-10.48,12.49h10.09v3.9h-15.81v-3.9l10.64-12.49h-10.25v-4.1Zm28.06,0c6.22,0,9.33,3.17,9.33,9.52,0,.85-.06,1.69-.18,2.54h-13.6c0,2.89,2.12,4.33,6.36,4.33,2.07,0,4.14-.19,6.21-.59v4.1c-1.81,.39-4.01,.59-6.6,.59-7.43,0-11.14-3.49-11.14-10.48s3.21-10.01,9.62-10.01Zm-4.45,8.47h8.74v-.16c0-2.84-1.43-4.25-4.29-4.25s-4.22,1.47-4.45,4.41Zm17.66,12.02V18.49h4l.64,3.01c1.96-2,4.2-3.01,6.71-3.01,4.85,0,7.28,2.52,7.28,7.57v12.92h-5.17v-12.92c0-2.26-1.13-3.4-3.38-3.4-1.68,0-3.32,.67-4.92,2.01v14.3h-5.17Zm28.71-27.91v27.91h-5.17V11.08h5.17Zm2.46,7.42h5.48l5.17,14.75,5.05-14.75h5.39l-8.51,21.1c-1.51,3.72-3.92,6.37-7.24,7.94l-2.5-3.53c2.29-1,3.96-2.63,5-4.9l-7.85-20.61Zm23.26-3.32h3.83l.78,3.32h5.15v4.1h-4.59v9.43c0,1.91,.83,2.87,2.48,2.87h2.11v4.1h-4.61c-3.43,0-5.15-1.84-5.15-5.52V15.17Zm18.46-4.1v4.1h-5.17v-4.1h5.17Zm0,7.42v20.49h-5.17V18.49h5.17Zm20.02,19.91c-1.69,.39-3.45,.59-5.27,.59-7.29,0-10.93-3.55-10.93-10.64,0-6.57,3.64-9.86,10.93-9.86,1.82,0,3.58,.2,5.27,.59v4.1c-1.69-.39-3.32-.59-4.88-.59-4.1,0-6.15,1.92-6.15,5.76,0,4.36,2.05,6.54,6.15,6.54,1.56,0,3.19-.19,4.88-.59v4.1Z'/%3e%3c/svg%3e",
+			"square": "data:image/png;base64,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"
+		},
+		"search_buttons": {
+			"background_color": "background.action.primary.normal"
+		},
+		"search_input": {
+			"background_color": "background.action.primary.active",
+			"color": "text.base.level300",
+			"placeholder_color": "text.base.level500"
+		},
+		"search_panel": {
+			"background_color": "background.action.primary.normal",
+			"color": "text.base.level300"
+		},
+		"search_result": {
+			"description": {
+				"color": "text.base.level300"
+			},
+			"hover": {
+				"background_color": "border.base.level600"
+			},
+			"title": {
+				"color": "text.base.level000"
+			}
+		},
+		"secondary_color": "text.base.level300"
+	},
+	"semantic_tokens": {
+		"colors": {
+			"background": {
+				"action": {
+					"primary": {
+						"active": "gray.800",
+						"disabled": "gray.700",
+						"hover": "gray.800",
+						"normal": "gray.700",
+						"selected": "gray.800"
+					},
+					"secondary": {
+						"active": "gray.400",
+						"disabled": "gray.40",
+						"focused": "gray.60",
+						"hover": "gray.50",
+						"normal": "gray.20",
+						"selected": "gray.500"
+					},
+					"tertiary": {
+						"active": "gray.60",
+						"disabled": "gray.20",
+						"focused": "gray.40",
+						"hover": "gray.20",
+						"normal": "white",
+						"selected": "gray.500"
+					}
+				},
+				"base": {
+					"level000": "white",
+					"level010": "gray.10",
+					"level020": "gray.20",
+					"level030": "gray.30",
+					"level040": "gray.40",
+					"level050": "gray.50",
+					"level060": "gray.60",
+					"level070": "gray.70",
+					"level080": "gray.80",
+					"level090": "gray.90",
+					"level100": "gray.100",
+					"level200": "gray.200",
+					"level300": "gray.300",
+					"level400": "gray.400",
+					"level500": "gray.500",
+					"level600": "gray.600",
+					"level700": "gray.700",
+					"level800": "gray.800",
+					"level900": "gray.900"
+				},
+				"brand": {
+					"primary": {
+						"normal": "brand.90"
+					},
+					"secondary": {}
+				},
+				"danger": {
+					"primary": {
+						"hover": "red.200",
+						"normal": "red"
+					},
+					"secondary": {
+						"hover": "red.20",
+						"normal": "red.10"
+					}
+				},
+				"dimension": {
+					"primary": {},
+					"secondary": {
+						"hover": "light_blue.20",
+						"normal": "light_blue.10"
+					}
+				},
+				"measure": {
+					"primary": {},
+					"secondary": {
+						"hover": "orange.20",
+						"normal": "orange.10"
+					}
+				},
+				"table_calculation": {
+					"primary": {},
+					"secondary": {
+						"hover": "green.20",
+						"normal": "green.10"
+					}
+				},
+				"warning": {
+					"primary": {
+						"normal": "orange.400"
+					},
+					"secondary": {
+						"normal": "orange.10"
+					}
+				}
+			},
+			"border": {
+				"action": {
+					"primary": {
+						"active": "gray.800",
+						"normal": "gray.700"
+					},
+					"secondary": {
+						"active": "gray.70",
+						"normal": "gray.60"
+					},
+					"tertiary": {
+						"active": "gray.400",
+						"normal": "gray.60"
+					}
+				},
+				"base": {
+					"level000": "white",
+					"level010": "gray.10",
+					"level020": "gray.20",
+					"level030": "gray.30",
+					"level040": "gray.40",
+					"level050": "gray.50",
+					"level060": "gray.60",
+					"level070": "gray.70",
+					"level080": "gray.80",
+					"level090": "gray.90",
+					"level100": "gray.100",
+					"level200": "gray.200",
+					"level300": "gray.300",
+					"level400": "gray.400",
+					"level500": "gray.500",
+					"level600": "gray.600",
+					"level700": "gray.700",
+					"level800": "gray.800",
+					"level900": "gray.900"
+				},
+				"brand": {
+					"tertiary": {
+						"normal": "gray.100"
+					}
+				},
+				"danger": {
+					"primary": {
+						"normal": "red.400"
+					},
+					"secondary": {
+						"normal": "red.200"
+					}
+				},
+				"dimension": {
+					"primary": {},
+					"secondary": {
+						"normal": "light_blue.400"
+					}
+				},
+				"measure": {
+					"primary": {},
+					"secondary": {
+						"normal": "orange.500"
+					}
+				},
+				"table_calculation": {
+					"primary": {},
+					"secondary": {
+						"normal": "green.500"
+					}
+				},
+				"warning": {
+					"primary": {
+						"normal": "orange"
+					},
+					"secondary": {
+						"normal": "orange.200"
+					},
+					"tertiary": {
+						"normal": "orange.10"
+					}
+				}
+			},
+			"icon": {
+				"action": {
+					"primary": {
+						"normal": "gray.800"
+					},
+					"secondary": {
+						"normal": "gray.400"
+					},
+					"tertiary": {
+						"normal": "gray.300"
+					}
+				},
+				"danger": {
+					"primary": {
+						"normal": "red.600"
+					},
+					"secondary": {
+						"normal": "red.300"
+					}
+				},
+				"dimension": {
+					"primary": {},
+					"secondary": {
+						"normal": "light_blue.400"
+					}
+				},
+				"measure": {
+					"primary": {},
+					"secondary": {
+						"normal": "orange.500"
+					}
+				},
+				"success": {
+					"primary": {
+						"normal": "green.600"
+					}
+				},
+				"table_calculation": {
+					"primary": {},
+					"secondary": {
+						"normal": "green.500"
+					}
+				},
+				"warning": {
+					"primary": {},
+					"secondary": {
+						"normal": "orange.300"
+					}
+				}
+			},
+			"scrollbar": {
+				"primary": {
+					"normal": "gray.600"
+				},
+				"secondary": {}
+			},
+			"scrollbar_thumb": {
+				"primary": {
+					"normal": "gray.500"
+				},
+				"secondary": {}
+			},
+			"text": {
+				"action": {
+					"primary": {
+						"normal": "white"
+					},
+					"secondary": {
+						"normal": "gray.700",
+						"selected": "white"
+					},
+					"tertiary": {
+						"normal": "gray.700",
+						"selected": "white"
+					}
+				},
+				"base": {
+					"level000": "white",
+					"level010": "gray.10",
+					"level020": "gray.20",
+					"level030": "gray.30",
+					"level040": "gray.40",
+					"level050": "gray.50",
+					"level060": "gray.60",
+					"level070": "gray.70",
+					"level080": "gray.80",
+					"level090": "gray.90",
+					"level100": "gray.100",
+					"level200": "gray.200",
+					"level300": "gray.300",
+					"level400": "gray.400",
+					"level500": "gray.500",
+					"level600": "gray.600",
+					"level700": "gray.700",
+					"level800": "gray.800",
+					"level900": "gray.900"
+				},
+				"brand": {},
+				"danger": {
+					"primary": {
+						"normal": "red.400"
+					},
+					"secondary": {
+						"normal": "red.300"
+					}
+				},
+				"dimension": {},
+				"measure": {},
+				"warning": {
+					"primary": {
+						"normal": "orange.800"
+					},
+					"secondary": {
+						"normal": "orange.400"
+					}
+				}
+			}
+		},
+		"fonts": {
+			"body": "GT-Zirkon",
+			"heading": "GT-Zirkon",
+			"mono": "ApercuMono, Menlo, monospace"
+		}
+	},
+	"site_customization": {
+		"show_help_blurbs": true
+	}
+}
